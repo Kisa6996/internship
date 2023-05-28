@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="main__body">
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <ul class="navbar__list">
+            <li class="navbar_item"><a href="#shirt">Рубашки</a></li>
+            <li class="navbar_item"><a href="#shorts">Шорты</a></li>
+            <li class="navbar_item"><a href="#shoes">Обувь</a></li>
+          </ul>
+          <div class="switch-btn switch-on" onclick="change()"></div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <h1 id="shirt" class="main-title">Рубашки</h1>
+        <h1 id="shorts" class="main-title">Шорты</h1>
+        <h1 id="shoes" class="main-title">Обувь</h1>
+      </div>
+      <div class="link">
+        <ul class="list">
+          <li class="list_item"><a class="list-a" href="#shirt">Рубашки</a></li>
+          <li class="list_item"><a class="list-a" href="#shorts">Шорты</a></li>
+          <li class="list_item"><a class="list-a" href="#shoes">Обувь</a></li>
+        </ul>
+      </div>
+      <a href="#shirt" class="btn-up"></a>
+    </main>
+
+    <div id="myModal" class="modal">
+      <!-- Содержимое модального окна -->
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <form id="purchaseForm">
+          <div>
+            <label for="quantityInput">Количество:</label>
+            <input type="number" id="quantityInput" min="1" required />
+          </div>
+
+          <div class="color">
+            <input
+              type="radio"
+              id="colorRed"
+              name="color"
+              value="red"
+              required
+            />
+            <label for="colorBlue">Синий</label>
+            <br />
+            <input
+              type="radio"
+              id="colorGreen"
+              name="color"
+              value="green"
+              required
+            />
+            <label for="colorGreen">Зеленый</label>
+            <br />
+            <input
+              type="radio"
+              id="colorYellow"
+              name="color"
+              value="yellow"
+              required
+            />
+            <label for="colorYellow">Желтый</label>
+          </div>
+
+          <div>
+            <label for="commentInput"
+              >Комментарий:</label
+            >
+            <textarea id="commentInput" rows="4" maxlength="2000"></textarea>
+          </div>
+
+          <div>
+            <button type="submit" onclick="openAlert()">Купить</button>
+            <button type="button" onclick="closeModal()">Закрыть</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+
+  <script src="./scrupt.js"></script>
+</html>
